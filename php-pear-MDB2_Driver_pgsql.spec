@@ -4,7 +4,7 @@
 
 Summary:        %{_pearname} - pgsql MDB2 driver
 Name:           php-pear-%{_pearname}
-Version:        1.4.0
+Version:        1.4.1
 Release:        %mkrel 1
 Epoch:          0
 License:        PHP License
