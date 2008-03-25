@@ -1,6 +1,6 @@
 %define        _class           MDB2_Driver_pgsql
 %define        _pearname        %{_class}
-%define        _status          stable
+%define        _status          beta
 
 Summary:        %{_pearname} - pgsql MDB2 driver
 Name:           php-pear-%{_pearname}
