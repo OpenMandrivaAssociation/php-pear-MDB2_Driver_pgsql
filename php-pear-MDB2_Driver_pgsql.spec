@@ -4,7 +4,7 @@
 
 Name:           php-pear-%{upstream_name}
 Version:        1.5.0
-Release:        %mkrel 0.0.b3.3
+Release:        0.0.b3.5
 Summary:	Pgsql MDB2 driver
 Epoch:          1
 License:        PHP License
@@ -17,7 +17,6 @@ Requires(preun): php-pear
 Requires:       php-pear
 BuildRequires:  php-pear
 BuildArch:      noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 MDB2 pgsql driver.
@@ -40,7 +39,6 @@ install -d %{buildroot}%{_datadir}/pear/packages
 install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 %clean
-rm -rf %{buildroot}
 
 
 
