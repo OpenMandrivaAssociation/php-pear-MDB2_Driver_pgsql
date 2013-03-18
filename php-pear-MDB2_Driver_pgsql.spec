@@ -3,14 +3,14 @@
 %define        upstream_name    %{_class}_%{_subclass}
 
 Name:           php-pear-%{upstream_name}
-Version:        1.5.0
-Release:        0.0.b3.5
+Version:        1.5.0b4
+Release:        1
 Summary:	Pgsql MDB2 driver
 Epoch:          1
 License:        PHP License
 Group:          Development/PHP
 URL:            http://pear.php.net/package/MDB2_Driver_pgsql/
-Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}b3.tgz
+Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}.tgz
 Requires:	php-pgsql
 Requires(post): php-pear
 Requires(preun): php-pear
@@ -118,4 +118,5 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 * Fri Dec 15 2006 David Walluck <walluck@mandriva.org> 1.3.0-1mdv2007.0
 + Revision: 97243
 - Import php-pear-MDB2_Driver_pgsql
+
 
