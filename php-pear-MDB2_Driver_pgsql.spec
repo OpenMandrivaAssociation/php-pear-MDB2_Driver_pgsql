@@ -3,14 +3,14 @@
 %define        upstream_name    %{_class}_%{_subclass}
 
 Name:           php-pear-%{upstream_name}
-Version:        1.5.0b4
-Release:        1
+Version:        1.5.0
+Release:        0.0.b4
 Summary:	Pgsql MDB2 driver
 Epoch:          1
 License:        PHP License
 Group:          Development/PHP
 URL:            http://pear.php.net/package/MDB2_Driver_pgsql/
-Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}.tgz
+Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}b4.tgz
 Requires:	php-pgsql
 Requires(post): php-pear
 Requires(preun): php-pear
