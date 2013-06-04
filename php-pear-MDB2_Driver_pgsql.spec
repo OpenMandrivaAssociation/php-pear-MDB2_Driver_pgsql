@@ -1,16 +1,17 @@
 %define        _class           MDB2
 %define        _subclass        Driver_pgsql
 %define        upstream_name    %{_class}_%{_subclass}
+%define			beta 			b4
 
 Name:           php-pear-%{upstream_name}
-Version:        1.5.0
-Release:        0.0.b4
+Version:        1.5.0b4
+Release:        1
 Summary:	Pgsql MDB2 driver
 Epoch:          1
 License:        PHP License
 Group:          Development/PHP
 URL:            http://pear.php.net/package/MDB2_Driver_pgsql/
-Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}b4.tgz
+Source0:        http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}.tgz
 Requires:	php-pgsql
 Requires(post): php-pear
 Requires(preun): php-pear
@@ -22,13 +23,11 @@ BuildArch:      noarch
 MDB2 pgsql driver.
 
 %prep
-%setup -q -c -n %{name}-%{version}b3
-mv package.xml %{upstream_name}-%{version}b3/%{upstream_name}.xml
+%setup -q -c -n %{name}-%{version}%{beta}
+mv package.xml %{upstream_name}-%{version}%{beta}/%{upstream_name}.xml
 
 %install
-%{__rm} -rf %{buildroot}
-
-cd %{upstream_name}-%{version}b3
+cd %{upstream_name}-%{version}%{beta}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
 rm -rf %{buildroot}%{_datadir}/pear/.??*
 
@@ -43,7 +42,6 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 
 %files
-%defattr(-,root,root)
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/data/%{upstream_name}
 %{_datadir}/pear/packages/%{upstream_name}.xml
@@ -118,5 +116,6 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 * Fri Dec 15 2006 David Walluck <walluck@mandriva.org> 1.3.0-1mdv2007.0
 + Revision: 97243
 - Import php-pear-MDB2_Driver_pgsql
+
 
 
