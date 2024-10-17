@@ -10,7 +10,7 @@ Version:	1.5.0
 Release:	0.0.%{beta}
 License:	PHP License
 Group:		Development/PHP
-Url:		http://pear.php.net/package/MDB2_Driver_pgsql/
+Url:		https://pear.php.net/package/MDB2_Driver_pgsql/
 Source0:	http://download.pear.php.net/package/MDB2_Driver_pgsql-%{version}%{beta}.tgz
 BuildArch:	noarch
 BuildRequires:	php-pear
